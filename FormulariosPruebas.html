@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form method="post" action="/send/enviar.php">
+        <fieldset><legend>TITULO DEL FORMULARIO</legend>
+        <label>
+            Text: Nombre
+            <input type="text" name="NOMBRE" placeholder="Insertar Nombre" tabindex="1" size="50">
+        </label>
+        <br>
+        Text: Apellido 1
+        <input type="text" name="APELLIDO1" placeholder="Insertar Nombre" tabindex="3">
+        <br>
+        Text: Apellido 2
+        <input type="text" name="APELLIDO2" placeholder="Insertar Nombre">
+        <br>
+        Text: Dirección
+        <input type="text" name="DIRECCIÓN" placeholder="Insertar Nombre" tabindex="2">
+        <br>
+        Number:
+        <input type="number" value="0" name="TELEFONO" min="-150" max="150" step="5">
+        <br>
+        Range:
+        <input type="range" value="-5" oninput="this.nextElementSibling.value = this.value" min="0" max="5" step="1">
+        <output>0</output>
+        <br>
+        Selecciona la fecha deseada:
+        <input type="date" value="2030-02-25" min="2024-02-25" max="2024-05-25">
+        Selecciona el mes deseado:
+        <input type="month" value="2024-02" min="2024-02" max="2024-05">
+        
+        Selecciona la fecha deseada:
+        <input type="datetime-local" value="2024-07-23T11:00" min="2024-03-23T11:00" max="2024-11-23T11:00" step="3600">
+        <br>
+        <input type="submit"> <input type="reset">
+    </fieldset>
+    </form>
+
+    <!--Checkox y Radiobutton-->
+    <form method="post" action="/send/index.php">
+        <fieldset style="display: inline-block; border: 5px solid gold;"><legend>TITULO DEL FORMULARIO</legend>
+        Puestos de trabajo buscados <br/>
+        <input name="puesto_directivo" type="checkbox" value="direccion" checked> Dirección
+        <input name="puesto_tecnico" type="checkbox" value="tecnico"/> Técnico
+        <input name="puesto_empleado" type="checkbox" value="empleado"/> Empleado
+        <br>
+        <input type="submit"> <input type="reset">
+        </fieldset>
+    </form>
+    
+    <br><br>
+
+    <form method="post" action="/send/">
+        Selecciona el color deseado:
+        <input type="color">
+    </form>
+    
+    <form method="post" action="/send/">
+        Selecciona la opción deseada:
+        <select multiple>
+            <option disabled selected>Elige una opción</option>
+            <optgroup label="Categoría 1">
+            <option value="1">Opción 1</option>
+            <option value="2">Opción 2</option>
+            </optgroup>
+            <optgroup label="Categoría 2">
+            <option value="3">Opción 3</option>
+            <option value="4">Opción 4</option>
+            <option value="5">Opción 5</option>
+            </optgroup>
+        </select>
+
+        <textarea style="overflow:scroll;" rows="20" cols="10">
+
+        </textarea>
+    </form>
+      
+</body>
+</html>
